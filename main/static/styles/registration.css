@@ -1,0 +1,274 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #18243c, rgb(140, 141, 143));
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 50rem;
+    background: rgba(255, 255, 255, .5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    border: 2px solid white;
+}
+
+
+#title{
+    font-size: 3.0rem;
+    color: #18243c;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 6%;
+}
+
+
+.container .column-option{
+    display: flex;
+    column-gap: 15px;
+}
+
+.input-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container .gender-box {
+    margin-top: 1rem;
+}
+
+.gender-box h3{
+    color: #18243c;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.container :where(.gender-option, .gender){
+    display: flex;
+    column-gap: 15px;
+    text-align: center;
+    width: 14.78rem;
+}
+
+h3 {
+    color: #18243c;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+
+
+.container :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+
+.addres :where(input){
+    margin-top: 1rem;
+}
+
+.select-box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: grey;
+    font-size: 1;
+}
+
+
+input[type="radio"]{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    display: none;
+}
+
+input[type="radio"]:checked + label{
+    background-color: rgb(206, 87, 23);
+    color: rgb(206, 87, 23);
+}
+
+input[type="radio"]:checked + label:before{
+   height: 16px;
+   width: 16px;
+   border: 10px solid rgb(206, 87, 23);
+   background-color: rgb(206, 87, 23);
+}
+
+@media screen and (max-width: 500px) {
+    .container .column {
+        flex-wrap: wrap;
+    }
+    .container :where(.gender-option, .gender){
+        row-gap: 15px;
+    }
+}
+
+h1{
+    font-weight: 200;
+    line-height: 1.2;
+}
+p{
+    font-size: 1rem;
+}
+h1,p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+label{
+    
+    color: #18243c;
+    display: flex;
+    width: 46.25rem;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid #18243c;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+label:hover{
+
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+
+}
+
+label:hover:before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+label:before{
+    
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 3px solid #18243c;
+    border-radius: 50%;
+    margin-right: 20px;
+ 
+
+}
+
+input[type="radio"]{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    display: none;
+}
+
+input[type="radio"]:checked + label{
+    background-color: rgb(206, 87, 23);
+    color: #18243c;
+}
+
+input[type="radio"]:checked + label:before{
+   height: 16px;
+   width: 16px;
+   border: 10px solid white;
+   background-color: #18243c;
+}
+
+
+
+
+
+
+#quest{
+    color: #18243c;
+    font-size: 1.30rem;
+    font-weight: bold;
+    margin-bottom: .50rem;
+    margin-top: 1.30rem;
+}
+
+
+@media (min-width: 500px){
+    form{
+        padding: 3rem;
+    }
+}
+
+.inputRadio
+{
+    display: inline-block;
+    width: 46.25;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+
+}
+
+button {
+    display: block;
+    margin: 50px auto 0;
+    background: #18243c;
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+    width: 300px;
+}
+
+ button:hover {
+    background-color: rgb(206, 87, 23);
+    cursor: pointer;
+}
+
+.login-card-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.login-card-logo img {
+    width: 80px;
+}
+
+.input-box input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+
+

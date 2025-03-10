@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles/registration.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    
+    <form id="survey-form" method="post" action="">
+
+        <div class="container">
+
+                <div class="login-card-logo">
+                        <img src="{% static 'images/Logo.jpg.png' %}" alt="logo">
+                </div>
+
+                <header class="header">
+                        <h1 id="title">
+                            Americorps Survey
+                        </h1>
+                </header>
+
+                <div class="input-box">
+                    <h3>Full Name:</h3>
+                    <input type="text" placeholder="Enter Full Name" required name="fname"/>
+                </div>
+
+                <div class="input-box">
+                    <h3>Email Address:</h3>
+                    <input type="text" placeholder="Enter Email Address" required name="email"/>
+                </div>
+
+            <div class="column">
+                <div class="column-option">
+                    <div class="input-box">
+                        <h3>Phone Number:</h3>
+                        <input type="text" placeholder="Enter Phone Number" required name="phone_num"/>
+                    </div>
+                    <div class="input-box">
+                        <h3>Birth Date:</h3>
+                        <input type="text" placeholder="DD/MM/YYYY"  required name="dob"/>
+                    </div>
+                    <div class="input-box">
+                        <h3>Student ID:</h3>
+                        <input type="text" placeholder="Enter ID" pattern="[0-9]{7}" required name="student_id"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" value="M"/>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" value="F"/>
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="gender" value="O"/>
+                        <label for="check-other">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box address">
+                <h3>Address:</h3>
+                <input type="text" placeholder="Enter Street Address" required name="Str_add"/>
+                <input type="text" placeholder="Enter Street Address Line 2"/>
+                <input type="text" placeholder="Enter City" required name="city"/>
+                <input type="text" placeholder="Enter Postal Code" required name="postal_code"/>
+                <input type="text" placeholder="Enter State" required name="state"/>
+            </div>
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest">What is the highest level of education completed by your parents?</p>
+                <input type="radio" id="q1_option1" name="question1" value="E">
+                <label for="q1_option1">Elementary</label>
+        
+                <input type="radio" id="q1_option2" name="question1" value="J">
+                <label for="q1_option2">Jr. High School/Middle School</label>
+
+                <input type="radio" id="q1_option3" name="question1" value="H">
+                <label for="q1_option3">High School</label>
+
+                <input type="radio" id="q1_option4" name="question1" value="S">
+                <label for="q1_option4">Some College</label>
+
+                <input type="radio" id="q1_option5" name="question1" value="C">
+                <label for="q1_option5">College Degree</label>
+
+                <input type="radio" id="q1_option6" name="question1" value="U">
+                <label for="q1_option6">Unknown</label>
+            </div>
+            <!-- end of radio button -->
+            <div class="form-group">
+                <p id="quest">Are you a veteran?</p>
+                <input type="radio" id="q2_option1" name="question2" value="Y">
+                <label for="q2_option1">Yes</label>
+        
+                <input type="radio" id="q2_option2" name="question2" value="N">
+                <label for="q2_option2">No</label>
+            </div>
+
+             <!-- end of radio button -->
+             <div class="form-group">
+                <p id="quest">Are you currently in active military duty?</p>
+                <input type="radio" id="q3_option1" name="question3" value="Y">
+                <label for="q3_option1">Yes</label>
+        
+                <input type="radio" id="q3_option2" name="question3" value="N">
+                <label for="q3_option2">No</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Is someone in your family currently active military duty?</p>
+                <input type="radio" id="q4_option1" name="question4" value="Y">
+                <label for="q4_option1">Yes</label>
+        
+                <input type="radio" id="q4_option2" name="question4" value="N">
+                <label for="q4_option2">No</label>
+            </div>
+
+            <div class="input-box">
+                <p id="quest">What is your current high school GPA? </p>
+                <input type="text" placeholder="Enter GPA" required name="GPA">
+            </div>
+
+            <div class="form-group">
+                <p id="quest">What are your plans for going to college?</p>
+                <input type="radio" id="q6_option1" name="question6" value="C">
+                <label for="q6_option1">Plan on going to college</label>
+        
+                <input type="radio" id="q6_option2" name="question6" value="N">
+                <label for="q6_option2">Not going to college</label>
+
+                <input type="radio" id="q6_option3" name="question6" value="M">
+                <label for="q6_option3">Plan to enroll in military</label>
+
+                <input type="radio" id="q6_option4" name="question6" value="W">
+                <label for="q6_option4">Plan to work</label>
+
+                <input type="radio" id="q6_option5" name="question6" value="O">
+                <label for="q6_option5">Other</label>
+            </div>
+
+            <div class="input-box">
+                <p id="quest">What is your first choice for going to college?</p>
+                <input type="text" placeholder="Enter school name" required name="first_choice">
+            </div>
+
+            <div class="input-box">
+                <p id="quest">What is your second choice for going to college?</p>
+                <input type="text" placeholder="Enter school name" required name="second_choice">
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Degree of Interest?</p>
+                <input type="radio" id="q9_option1" name="question9" value="C">
+                <label for="q9_option1">Certificate</label>
+        
+                <input type="radio" id="q9_option2" name="question9" value="A">
+                <label for="q9_option2">Associates</label>
+
+                <input type="radio" id="q9_option3" name="question9" value="B">
+                <label for="q9_option3">Bachelors</label>
+
+                <input type="radio" id="q9_option4" name="question9" value="M">
+                <label for="q9_option4">Military</label>
+
+                <input type="radio" id="q9_option5" name="question9" value="O">
+                <label for="q9_option5">Other</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Admissions Application?</p>
+                <input type="radio" id="q10_option1" name="question10" value="Y">
+                <label for="q10_option1">Yes</label>
+        
+                <input type="radio" id="q10_option2" name="question10" value="N">
+                <label for="q10_option2">No</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Admissions Status for universities/colleges?</p>
+                <input type="radio" id="q11_option1" name="question11" value="P">
+                <label for="q11_option1">Pending</label>
+        
+                <input type="radio" id="q11_option2" name="question11" value="A">
+                <label for="q11_option2">Accepted</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Admissions Status for SAT/ACT?</p>
+                <input type="radio" id="q12_option1" name="question12" value="N">
+                <label for="q12_option1">Not Testing</label>
+        
+                <input type="radio" id="q12_option2" name="question12" value="R">
+                <label for="q12_option2">Registered</label>
+        
+                <input type="radio" id="q12_option3" name="question12" value="T">
+                <label for="q12_option3">Tested</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Type of Test?</p>
+                <input type="radio" id="q13_option1" name="question13" value="S">
+                <label for="q13_option1">SAT</label>
+        
+                <input type="radio" id="q13_option2" name="question13" value="A">
+                <label for="q13_option2">ACT</label>
+        
+                <input type="radio" id="q13_option3" name="question13" value="N">
+                <label for="q13_option3">N/A</label>
+            </div>
+
+            <div class="input-box">
+                <p id="quest">Test date for SAT/ACT</p>
+                <input type="text" placeholder="DD/MM/YYYY" required name="test_date">
+            </div>
+
+            <div class="form-group">
+                <p id="quest">HS Transcript Status?</p>
+                <input type="radio" id="q15_option1" name="question15" value="S">
+                <label for="q15_option1">Sent</label>
+        
+                <input type="radio" id="q15_option2" name="question15" value="P">
+                <label for="q15_option2">Pending</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">College Transcript Status(Dual Enrollment) "if applicable"</p>
+                <input type="radio" id="q16_option1" name="question16" value="S">
+                <label for="q16_option1">Sent</label>
+        
+                <input type="radio" id="q16_option2" name="question16" value="P">
+                <label for="q16_option2">Pending</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">TSI status:</p>
+                <input type="radio" id="q17_option1" name="question17" value="T">
+                <label for="q17_option1">Tested-Pass</label>
+        
+                <input type="radio" id="q17_option2" name="question17" value="F">
+                <label for="q17_option2">Tested-Fail</label>
+        
+                <input type="radio" id="q17_option3" name="question17" value="P">
+                <label for="q17_option3">Pending</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Finacial Aid Application?</p>
+                <input type="radio" id="q18_option1" name="question18" value="Y">
+                <label for="q18_option1">Yes</label>
+        
+                <input type="radio" id="q18_option2" name="question18" value="N">
+                <label for="q18_option2">No</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Type of Application?</p>
+                <input type="radio" id="q19_option1" name="question19" value="F">
+                <label for="q19_option1">FAFSA</label>
+        
+                <input type="radio" id="q19_option2" name="question19" value="T">
+                <label for="q19_option2">TASFA</label>
+        
+                <input type="radio" id="q19_option3" name="question19" value="O">
+                <label for="q19_option3">Other</label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Selected for Verification?</p>
+                <input type="radio" id="q20_option1" name="question20" value="Y">
+                <label for="q20_option1">Yes</label>
+        
+                <input type="radio" id="q20_option2" name="question20" value="N">
+                <label for="q20_option2">No</label>
+            </div>
+
+            <div class="input-box">
+                <p id="quest">Date applied for Financial Aid?</p>
+                <input type="text" placeholder="DD/MM/YYYY" required name="appliedforAid">
+            </div>
+
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+
+        </div>
+          
+    </form>
+
+
+</body>
+</html> 

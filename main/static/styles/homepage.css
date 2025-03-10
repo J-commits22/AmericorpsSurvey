@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #18243c,  rgb(140, 141, 143));
+    background-attachment: fixed;
+}
+
+.name{
+  margin-left: 7rem;
+  font-size: 30px;
+  color:#18243c;
+  text-decoration: none;
+  font-weight: 700;
+ 
+}
+
+.user{
+  font-size: 18px;
+  color:#18243c;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo{
+  width: 50px;
+}
+
+
+.navbar .logout {
+  position: relative;
+  font-size: 18px;
+  color:#18243c;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar .logout::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #18243c;
+  transition: .3s;
+}
+
+.navbar .logout:hover::before{
+  width: 100%;
+}
+
+.error_message {
+  color: white;
+}
+
+.container {
+   padding: 10%;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  .search-bar{
+    margin: 1rem;
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+  }
+
+  .search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: white;
+  }
+
+
+
+  ::placeholder{
+    color: white;
+  }
+
+  .search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    cursor: pointer;
+  }
+
+
+  .questions-card{
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    background: rgba(255, 255, 255, .5);
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+    margin: 1rem;
+  }
+  
+  
+  p{
+    margin: 1.50rem;
+    font-size: 15px;
+    color:#18243c
+  }
+
+  .title {
+    text-align: center;
+    margin: 1rem;
+    color:#18243c;
+    font-size: 20px;
+  }
+
+  .header{
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.line{
+    color:#18243c
+}

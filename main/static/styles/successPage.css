@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background: rgb(140, 141, 143);
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+
+.login-card-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-card-logo img {
+    width: 200px;
+}
+
+.header{
+    color:#18243c;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.return-to-login{
+    text-align: center;
+    color:#18243c
+}
+
+.return-to-login a{
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.return-to-login a:hover {
+    text-decoration: underline;
+}

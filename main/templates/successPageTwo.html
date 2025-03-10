@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/successPageTwo.css' %}"/>
+    <title>successPage</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-card-logo">
+        <a href="{% url 'registration' %}">
+        <img href="" src="{% static 'images/Logo.jpg.png' %}" alt="logo">
+    </a>
+    </div>
+
+    <div class="header">
+        <h1>
+            Successfully Submitted Survey
+        </h1>
+    </div>
+
+    <div class="completed-survey">
+        <p>
+            Thank You!
+        </p>
+    </div>
+
+</div>
+</body>
+</html>

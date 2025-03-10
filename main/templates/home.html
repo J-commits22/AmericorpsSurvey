@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+{% load static %}
+<html lagn="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/homepage.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Query Page</title>
+
+</head>
+
+    <body>
+
+       <header class="header">
+
+        <img src="{% static 'images/Logo.jpg.png' %}" alt="logo" class="logo">
+        <a href="#" class="name">Americorps</a>
+        
+        <nav class="navbar">
+            <a class="user">{{ user.username }}</a>
+            <a href="{% url 'logout' %}" class="logout"> Logout </a>
+        </nav>
+
+       </header>
+       
+
+    <div class="container">
+
+        
+        <form method="get" class="search-bar" action="{% url 'home' %}">
+
+            <input type="text" id="student_id" placeholder="Search Student ID" name="student_id" required>
+            <button id="search-button" type="submit"><span class="material-symbols-outlined">search</span></button>
+
+        </form>
+
+        {% if error_message %}
+        <div class="error-message">
+            <p>{{ error_message }}</p>
+        </div>
+        {% else %}
+    
+        <div class="card">
+
+            <div class="questions-card">
+
+            {% if student %}
+                <div class="title">
+                    <h2>Questions and Answers</h2>
+                    <hr class="line">
+                </div>
+            
+        
+            <p><strong>Full Name: </strong> {{ student.fname }}</p>
+            <p><strong>Email: </strong> {{ student.email }}</p>
+            <p><strong>Phone Number:</strong> {{ student.phone_num }}</p>
+            <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
+            <p><strong>Gender:</strong> 
+                {% if student.get_gender_display %}
+                    {{ student.get_gender_display }}
+                {% else %}
+                    {{ student.gender }}
+                {% endif %}
+            </p>
+            <p><strong>Address:</strong> {{ student.Str_add }}, {{ student.city }} {{ student.state }}, {{ student.postal_code }}</p>
+        
+            <p><strong>What is the highest level of education completed by your parents:</strong> 
+                {% if student.get_question1_display %}
+                    {{ student.get_question1_display }}
+                {% else %}
+                    {{ student.question1 }}
+                {% endif %}
+            </p>
+            <p><strong>Are you a veteran: </strong> 
+                {% if student.get_question2_display %}
+                    {{ student.get_question2_display }}
+                {% else %}
+                    {{ student.question2 }}
+                {% endif %}
+            </p>
+            <p><strong>Are you currently in active military duty:</strong> 
+                {% if student.get_question3_display %}
+                    {{ student.get_question3_display }}
+                {% else %}
+                    {{ student.question3 }}
+                {% endif %}
+            </p>
+            <p><strong>Is someone in your family currently active military duty:</strong> 
+                {% if student.get_question4_display %}
+                    {{ student.get_question4_display }}
+                {% else %}
+                    {{ student.question4 }}
+                {% endif %}
+            </p>
+            <p><strong>What is your current high school GPA:</strong> {{ student.GPA }}</p>
+            <p><strong>What are your plans for going to college:</strong> 
+                {% if student.get_question6_display %}
+                    {{ student.get_question6_display }}
+                {% else %}
+                    {{ student.question6 }}
+                {% endif %}
+            </p>
+            <p><strong>What is your first choice for going to college:</strong> {{ student.first_choice }}</p>
+            <p><strong>What is your second choice for going to college:</strong> {{ student.second_choice }}</p>
+            <p><strong>Degree of Interest:</strong> 
+                {% if student.get_question9_display %}
+                    {{ student.get_question9_display }}
+                {% else %}
+                    {{ student.question9 }}
+                {% endif %}
+            </p>
+            <p><strong>Admissions Application:</strong> 
+                {% if student.get_question10_display %}
+                    {{ student.get_question10_display }}
+                {% else %}
+                    {{ student.question10 }}
+                {% endif %}
+            </p>
+            <p><strong>Admissions Status for universities/colleges:</strong> 
+                {% if student.get_question11_display %}
+                    {{ student.get_question11_display }}
+                {% else %}
+                    {{ student.question11 }}
+                {% endif %}
+            </p>
+            <p><strong>Admission Status for SAT/ACT:</strong> 
+                {% if student.get_question12_display %}
+                    {{ student.get_question12_display }}
+                {% else %}
+                    {{ student.question12 }}
+                {% endif %}
+            </p>
+            <p><strong>Type of Test:</strong> 
+                {% if student.get_question13_display %}
+                    {{ student.get_question13_display }}
+                {% else %}
+                    {{ student.question13 }}
+                {% endif %}
+            </p>
+            <p><strong>Test Date for SAT/ACT:</strong> {{ student.test_date }}</p>
+            <p><strong>High School Transcript Status:</strong> 
+                {% if student.get_question15_display %}
+                    {{ student.get_question15_display }}
+                {% else %}
+                    {{ student.question15 }}
+                {% endif %}
+            </p>
+            <p><strong>College Transcript Status(Dual Enrollment) "if applicable":</strong> 
+                {% if student.get_question16_display %}
+                    {{ student.get_question16_display }}
+                {% else %}
+                    {{ student.question16 }}
+                {% endif %}
+            </p>
+            <p><strong>TSI status:</strong> 
+                {% if student.get_question17_display %}
+                    {{ student.get_question17_display }}
+                {% else %}
+                    {{ student.question17 }}
+                {% endif %}
+            </p>
+            <p><strong>Financial Aid Application:</strong> 
+                {% if student.get_question18_display %}
+                    {{ student.get_question18_display }}
+                {% else %}
+                    {{ student.question18 }}
+                {% endif %}
+            </p>
+            <p><strong>Type of Application:</strong> 
+                {% if student.get_question19_display %}
+                    {{ student.get_question19_display }}
+                {% else %}
+                    {{ student.question19 }}
+                {% endif %}
+            </p>
+            <p><strong>Selected for Verification:</strong> 
+                {% if student.get_question20_display %}
+                    {{ student.get_question20_display }}
+                {% else %}
+                    {{ student.question20 }}
+                {% endif %}
+            </p>
+            <p><strong>Date applied for Finanical Aid:</strong> {{ student.appliedforAid }}</p>
+        
+            {% endif %}
+            {% endif %}
+            </div>
+        </div>
+
+    </div>
+    </body>
+  
+</html>
+

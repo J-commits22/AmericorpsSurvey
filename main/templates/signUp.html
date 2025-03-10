@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <title>Login Page</title>
+</head>
+
+{% if messages %}
+<div class="error-card">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<body>
+  
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="{% static 'images/Logo.jpg.png' %}" alt="logo">
+            </div>
+            <div class="login-card-header">
+                <h1>Sign Up</h1>
+                <div>Please sign up to use the platform</div>
+            </div>
+
+            <form class="login-card-form" method="post">
+                {% csrf_token %}
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <input type="text" name="username" placeholder="Enter Username" maxlength="150" autofocus="" required="" aria-describedby="id_username_helptext" id="id_username">
+                </div>
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <input type="password" name="password1" placeholder="Enter Password" autocomplete="new-password" required="" pattern="[A-Za-z0-9]{8,}" aria-describedby="id_password1_helptext" id="id_password1">
+                    <p class="input-hint"> Must be at least 8 charcters</p>
+                </div>
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <input type="password" name="password2" placeholder="Confirm Password" autocomplete="new-password" required="" aria-describedby="id_password2_helptext" id="id_password2">
+                </div>
+
+                
+
+                <button type="submit">Create</button>
+                
+            </form>
+            
+        </div>
+    
+    </div>
+
+</body>
+
+</html>
